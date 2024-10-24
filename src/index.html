@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tauri App</title>
+  <link rel="stylesheet" href="/assets/simple.css" />
+  <script src="/assets/alpine.js" defer></script>
+  <script type="module" src="/main.js" defer></script>
+</head>
+
+<body>
+  <main x-data="app" id="app">
+    <!-- <h4>Pomodoro Timer</h4> -->
+
+    <div>
+      <div class="set-repition">
+        <!-- <h5>Whole Set Completed: <span x-text="wholeSetCompleted"></span></h5> -->
+        <h6>Set: <span x-text="set + '/' + maxSet"></span></h6>
+        <h6>Reps: <span x-text="repition + '/' + maxRepition"></span></h6>
+      </div>
+      <form x-show="showTimerInput" id="timer-form" @submit.prevent="startTimer">
+        <!-- <input 
+          type="number" id="timer-input" name="timer" x-bind:min="minTime" x-bind:max="maxTime" step="1"
+          x-model="initialTimer" /> -->
+        <button class="start-btn" type="submit">Start</button>
+      </form>
+
+      <div id="timer-display">
+        <div x-show="!showTimerInput">
+          <div class="timer-container">
+            <div class="timer">
+              <div class="timer-fill"></div>
+              <div class="timer-face">
+                <div class="hand"></div>
+                <div class="center-dot"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <h1 class="actual-time" x-text="formattedTime"></h1> -->
+        </div>
+        <div class="action" x-show="!showTimerInput">
+          <button @click="stopTimer">Stop</button>
+          <button type="button" x-show="phase == 'progress'" @click="pauseTimer">Pause</button>
+          <button x-show="phase == 'paused'" @click="resumeTimer">Resume</button>
+        </div>
+      </div>
+      <div class="py-4 mar-0-auto audio-player" >
+        <audio controls src="/assets/timer.mp3" id="timer-sound" loop>
+        </audio>
+      </div>
+    </div>
+
+    <button class="restart-btn" @click="restart">
+      <img width="45px" src="/assets/restart-2.svg" alt="restart">
+    </button>
+
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
