@@ -11,9 +11,9 @@ The **Pomodoro Technique** is a time management method developed by Francesco Ci
 This technique helps maintain focus, reduce burnout, and track time spent on tasks.
 
 ----------
-How it looks!
+### How it looks!
 
-![Screenshot 2024-10-24 at 10 19 49 AM](https://github.com/user-attachments/assets/66ebab4b-36dc-4f75-9f8e-995050e7f09d)
+<img src="https://github.com/user-attachments/assets/66ebab4b-36dc-4f75-9f8e-995050e7f09d" width="350" >
 
 ----------
 ## Tech Stack
