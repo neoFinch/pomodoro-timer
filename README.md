@@ -2,6 +2,12 @@
 
 The **Pomodoro Technique** is a time management method developed by Francesco Cirillo in the late 1980s. It helps improve focus and productivity by breaking work into intervals, traditionally 25 minutes long, separated by short breaks. Each interval is called a "Pomodoro," named after the tomato-shaped kitchen timer Cirillo used.
 
+## How to build:
+1. Clone the repo.
+2. Install tauri if not installed with following command
+  `npm i tauri -g`
+3. At the project root directory run command `tauri build`
+
 ## How to use:
 1. **Pick a task** you want to work on.
 2. **Set a timer** for 25 minutes and work on the task without interruptions.
